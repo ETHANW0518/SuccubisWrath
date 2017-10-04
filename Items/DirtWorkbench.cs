@@ -1,0 +1,30 @@
+using Terraria.ID;
+using Terraria.ModLoader;
+
+namespace SuccubisWrath.Items
+{
+	public class DirtWorkbench : ModItem
+	{
+		public override void SetDefaults()
+		{
+			item.width = 24;
+			item.height = 12;
+			item.maxStack = 99;
+			item.useTurn = true;
+			item.autoReuse = true;
+			item.useAnimation = 15;
+			item.useTime = 10;
+			item.useStyle = 1;
+			item.consumable = true;
+			item.createTile = mod.TileType("DirtWorkbench");
+		}
+
+		public override void AddRecipes()
+		{
+			ModRecipe recipe = new ModRecipe(mod);
+			recipe.AddIngredient(ItemID.DirtBlock, 25);
+			recipe.SetResult(this);
+			recipe.AddRecipe();
+		}
+	}
+}

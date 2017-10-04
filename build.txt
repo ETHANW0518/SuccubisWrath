@@ -1,0 +1,3 @@
+author = Hax4Ever
+version = 0.1
+displayName = Succubi's Wrath
